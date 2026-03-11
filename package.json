@@ -1,0 +1,32 @@
+{
+  "name": "pokemon-card-locator",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@types/mapbox-gl": "^3.4.1",
+    "@types/pg": "^8.18.0",
+    "mapbox-gl": "^3.19.1",
+    "next": "latest",
+    "pg": "^8.20.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-map-gl": "^8.1.0",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.1",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "tailwindcss": "^4.2.1",
+    "typescript": "latest"
+  }
+}

@@ -1,0 +1,36 @@
+import type { Store } from "@/types/store";
+
+export const mockStores: Store[] = [
+  {
+    id: "1",
+    name: "Rain City Cards",
+    addressLine1: "123 Aurora Ave N",
+    city: "Seattle",
+    stateRegion: "WA",
+    postalCode: "98109",
+    distanceMiles: 2.4,
+    placeType: "lgs",
+    placeTypeLabel: "Local game store",
+    hasSealed: true,
+    hasSingles: true,
+    hostsEvents: true,
+    latitude: 47.6205,
+    longitude: -122.3493,
+  },
+  {
+    id: "2",
+    name: "Cascade Collectibles",
+    addressLine1: "890 Market St",
+    city: "Bellevue",
+    stateRegion: "WA",
+    postalCode: "98004",
+    distanceMiles: 7.8,
+    placeType: "big_box",
+    placeTypeLabel: "Big box retailer",
+    hasSealed: true,
+    hasSingles: false,
+    hostsEvents: false,
+    latitude: 47.6101,
+    longitude: -122.2015,
+  },
+];
