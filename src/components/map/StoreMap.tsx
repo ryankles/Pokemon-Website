@@ -80,7 +80,7 @@ export function StoreMap({
         ref={mapRef}
         mapboxAccessToken={getPublicMapToken()}
         initialViewState={DEFAULT_VIEW_STATE}
-        style={{ width: "100%", height: "100%", minHeight: 480, borderRadius: 22 }}
+        style={{ width: "100%", height: "100%" }}
         mapStyle="mapbox://styles/mapbox/dark-v11"
         onLoad={reportViewport}
         onMoveEnd={reportViewport}

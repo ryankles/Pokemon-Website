@@ -151,7 +151,15 @@ export function MapView() {
 
   return (
     <section className="map-layout">
-      <div className="map-layout__main">
+      <StoreMap
+        stores={visibleStores}
+        showMarkers={showMapMarkers && showVendingMachines}
+        activeStoreId={activeStoreId}
+        onStoreSelect={setActiveStoreId}
+        onViewportChange={setMapBounds}
+      />
+
+      <div className="map-layout__controls">
         <section className="map-filters" aria-label="Map filters">
           <div>
             <p className="map-filters__eyebrow">Filters</p>
@@ -179,14 +187,6 @@ export function MapView() {
           </label>
         </section>
 
-        <StoreMap
-          stores={visibleStores}
-          showMarkers={showMapMarkers && showVendingMachines}
-          activeStoreId={activeStoreId}
-          onStoreSelect={setActiveStoreId}
-          onViewportChange={setMapBounds}
-        />
-
         {showVendingMachines && mapBounds && mapBounds.zoom < VENDING_FETCH_MIN_ZOOM ? (
           <p className="map-status">
             Zoom in to level {VENDING_FETCH_MIN_ZOOM} or closer to load vending machines for the current area.
@@ -197,6 +197,7 @@ export function MapView() {
         ) : null}
         {canLoadVendingMachines && errorMessage ? <p className="map-status">{errorMessage}</p> : null}
       </div>
+
       <aside className="store-list" aria-label="Store results">
         {listedStores.map((store) => (
           <div
